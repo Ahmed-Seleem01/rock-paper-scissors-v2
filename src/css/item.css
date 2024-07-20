@@ -1,0 +1,114 @@
+.stage-one {
+  width: 100%;
+}
+.buttons {
+  /* border: 1px solid; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+.buttons:before {
+  content: "";
+  display: block;
+  background-image: url(" ../images/bg-triangle.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 22%;
+}
+
+.game-item {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.game-item.paper-btn {
+  border: 15px solid blue;
+}
+.game-item.scissors-btn {
+  border: 15px solid orange;
+  margin-left: auto;
+}
+.game-item.rock-btn {
+  border: 15px solid red;
+  margin-top: 15px;
+}
+
+.stage-two .game-item.game-item.rock-btn {
+  margin-top: 0;
+}
+
+.game-item > img {
+  width: 40px;
+}
+
+.stage-two {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.stage-two-container {
+  margin-bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.placeholder {
+  width: 100px;
+  height: 100px;
+  background-color: var(--radial-gradient-second);
+  border-radius: 50%;
+}
+
+.stage-two-left,
+.stage-two-right {
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-container {
+  margin-bottom: 30px;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stage-two-left .button-container:first-child {
+  position: relative;
+  border: 1px solid;
+}
+.gradient-img {
+  position: absolute;
+  left: -140px;
+  top: -140px;
+}
+.gradient-img circle {
+  opacity: 0.03;
+}
+.stage-two-container p {
+  letter-spacing: 2px;
+}
+
+@media (min-width: 800px) {
+  .buttons {
+    gap: 30px;
+  }
+
+  .buttons:before {
+    top: 20%;
+  }
+}

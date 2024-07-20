@@ -1,0 +1,198 @@
+/* Define custom fonts */
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url("../fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-SemiBold.ttf"),
+    url("../fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Bold.ttf");
+  font-weight: 600, 700;
+}
+/* Define variables and general styels */
+:root {
+  font-size: 16px;
+  --stage-width-small: 320px;
+  --stage-width-large: 90vw;
+  --dark-text: hsl(229, 25%, 31%);
+  --Score-text: hsl(229, 64%, 46%);
+  --header-outline: hsl(217, 16%, 45%);
+  --radial-gradient-first: hsl(214, 47%, 23%);
+  --radial-gradient-second: hsl(237, 49%, 15%);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+/* general classes */
+.flex-display-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Set body styles */
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  background-image: linear-gradient(
+    0deg,
+    hsl(231, 45%, 17%),
+    hsl(215, 47%, 23%)
+  );
+  position: relative;
+}
+/* Set containers styles */
+div.container,
+main.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container {
+  margin: 0 auto;
+  width: var(--stage-width-small);
+  min-height: 100vh;
+  padding: 28px 0;
+  color: hsl(0, 0%, 100%);
+}
+/* Set header styles */
+header.game-introduction {
+  width: 100%;
+  height: 95px;
+  font-size: 1.2rem;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border: 3px solid var(--header-outline);
+  border-radius: 8px;
+}
+
+.game-words,
+.result-container {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.game-words > p {
+  align-self: flex-start;
+  margin: -3px 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.result-container {
+  background-color: hsl(0, 0%, 100%);
+  width: 70px;
+  height: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.4rem;
+}
+
+.result-container p:first-child {
+  color: var(--Score-text);
+  font-size: 0.55rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+.result-container p:last-child {
+  color: var(--dark-text);
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-top: 3px;
+}
+/* Set main container styles */
+main.main-container {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+.main-container .game-section {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.game-section {
+  position: relative;
+  width: 100%;
+}
+.choice-containers {
+  flex-direction: column;
+}
+.choice-containers:first-child {
+  background: radial-gradient(
+    closest-side,
+    var(--radial-gradient-first, hsl(0, 0%, 0%)),
+    var(--radial-gradient-second, hsl(0, 0%, 0%))
+  );
+}
+.choice-containers button {
+  pointer-events: none;
+}
+.before {
+  position: absolute;
+  top: 50px;
+  min-width: 100%;
+  min-height: 100%;
+  background: url(../images/bg-triangle.svg) no-repeat center 0;
+  background-size: 80%;
+}
+
+.announcement {
+  flex-direction: column;
+}
+.announcement p {
+  font-size: 3rem;
+  margin: 0;
+  margin-bottom: 15px;
+}
+.announcement button {
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  padding: 13px 48px;
+  border-radius: 10px;
+  border: 0;
+  color: var(--dark-text);
+}
+.rules .rules-btn {
+  background-color: transparent;
+  color: white;
+  padding: 8px 30px;
+  border: 2px solid var(--header-outline);
+  border-radius: 8px;
+  letter-spacing: 2px;
+}
+
+footer {
+  margin-bottom: -65px;
+}
+
+@media (min-width: 800px) {
+  .container {
+    width: var(--stage-width-large);
+    gap: 10px;
+    padding-top: 50px;
+  }
+
+  header.game-introduction {
+    width: 500px;
+  }
+  .game-words > p {
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+
+  main.main-container {
+    gap: 10px;
+  }
+  .main-container .game-section {
+    width: 380px;
+  }
+  .main-container .rules {
+    align-self: flex-end;
+  }
+}
