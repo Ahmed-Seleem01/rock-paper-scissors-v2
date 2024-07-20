@@ -1,0 +1,7 @@
+<svg width="400" height="400">
+   <circle cx="200" cy="200" r="190" fill="#fafafa"/> 
+   <circle cx="200" cy="200"  r="140" fill="#efefef" /> 
+   <circle cx="200" cy="200" r="90" fill="#ddd" /> 
+   <circle cx="200" cy="200"  r="40" fill="#ccc" /> 
+  />
+</svg>
