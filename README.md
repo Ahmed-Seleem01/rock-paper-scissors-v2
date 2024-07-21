@@ -46,10 +46,11 @@ Your task is to build a Rock Paper Scissors game that allows users to:
 
 ## Design
 
-You can use the following design resources to help you with the challenge:
+### Screenshots
 
-- [Figma File](#) (Add the link to the design file if available)
-- [Design Screenshots](#) (Add the link to the screenshots)
+Here are some screenshots of the design:
+
+![Game Interface](rock-paper-scissors-screenshot.png)
 
 ## Development
 
