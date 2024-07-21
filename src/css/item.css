@@ -2,7 +2,6 @@
   width: 100%;
 }
 .buttons {
-  /* border: 1px solid; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -89,7 +88,6 @@
 
 .stage-two-left .button-container:first-child {
   position: relative;
-  border: 1px solid;
 }
 .gradient-img {
   position: absolute;
