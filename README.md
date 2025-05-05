@@ -22,6 +22,8 @@ Welcome to the Rock Paper Scissors coding challenge on Frontend Mentor!
 
 This challenge is to build a Rock Paper Scissors game. The objective is to create a fully functional game that follows the classic rules and has a modern, responsive design.
 
+live version: [live](https://ahmed-seleem01.github.io/rock-paper-scissors-v2/)
+
 ## The Challenge
 
 Your task is to build a Rock Paper Scissors game that allows users to:
@@ -58,7 +60,7 @@ Here are some screenshots of the design:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/rock-paper-scissors-v2.git
+   git clone git@github.com:Ahmed-Seleem01/rock-paper-scissors-v2.git
    ```
 2. Navigate to the project directory:
 
